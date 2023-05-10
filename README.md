@@ -20,9 +20,9 @@ The pipeline is built using Nextflow, a workflow tool to run tasks across multip
     * [Nextflow](https://www.nextflow.io) >= 22.10.6
     * [Singularity](https://apptainer.org/docs/user/latest/) or [Docker](https://docs.docker.com/) containerization software 
 2. Resources
-    * **Reference genome**: we recommend [hs37d5](ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/phase2_reference_assembly_sequence/), that includes data from GRCh37, the rCRS mitochondrial sequence, Human herpesvirus 4 type 1 and the concatenated decoy sequences. 
+    * **Reference genome**: we recommend [hs37d5](http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/phase2_reference_assembly_sequence/), that includes data from GRCh37, the rCRS mitochondrial sequence, Human herpesvirus 4 type 1 and the concatenated decoy sequences. 
     * **Shapeit4 genetic maps**: maps for b37 can be downloaded directly from [shapeit4 github repository](https://github.com/odelaneau/shapeit4/blob/master/maps/genetic_maps.b37.tar.gz)
-    * **Mimimac4 reference panel**: we recommend [1000 Genomes Phase 3 reference panel](ftp://share.sph.umich.edu/minimac3/G1K_P3_M3VCF_FILES_WITH_ESTIMATES.tar.gz)
+    * **Mimimac4 reference panel**: we recommend [1000 Genomes Phase 3 reference panel](http://share.sph.umich.edu/minimac3/G1K_P3_M3VCF_FILES_WITH_ESTIMATES.tar.gz)
 3. Samples
     * For an accurate phasing prediction step, it is recommended to analyze 20 or more samples at the same time. 
     * VCFs are expected to be in hg19 or GRCh37. GRCh38 is not supported yet. If needed, [picard liftover tool](https://gatk.broadinstitute.org/hc/en-us/articles/360036831351-LiftoverVcf-Picard-) can be used to remap VCFs.
