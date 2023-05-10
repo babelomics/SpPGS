@@ -71,7 +71,7 @@ Your results, could then be compared with the [Spanish PRS reference distributio
 
 ## Citation
 A manuscript describing the tool is in preparation. In the meantime if you use the tool we ask you to cite the repo and the paper describing the CSVS resource:
-  * Spanish Polygenic Risk Score pipeline. https://github.com/babelomics/sprs
+  * Daniel López (2023). Spanish Polygenic Risk Score pipeline (v1.1). Zenodo. https://doi.org/10.5281/zenodo.7919159
   * Peña-Chilet M et al. CSVS, a crowdsourcing database of the Spanish population genetic variability. Nucleic Acids Res. 2021 Jan 8;49(D1):D1130-D1137. doi: 10.1093/nar/gkaa794.
 
 
