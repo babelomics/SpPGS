@@ -1,4 +1,4 @@
-# Spanish Polygenic Risk Score reference distributions pipeline
+# Spanish Polygenic Score reference distributions pipeline
 
 ## Table of contents
   * [Summary](#summary)
@@ -10,7 +10,7 @@
 -------------------------------------------------------------
 
 ## Summary
-*sprs* is a bioinformatics pipeline for calculating Polygenic Risk Scores (PRS) from [PDG catalog](https://www.pgscatalog.org) on a set of samples so that they can be compared to the [Spanish PRS reference distributions](http://csvs.clinbioinfosspa.es/?tab=prs). The pipeline was designed to fix common VCF malformations, impute missing values and eventually generate a sample sheet to feed the [pgsc_calc](https://github.com/PGScatalog/pgsc_calc) tool.
+*sprs* is a bioinformatics pipeline for calculating Polygenic Scores (PGS) from [PDG catalog](https://www.pgscatalog.org) on a set of samples so that they can be compared to the [Spanish PRS reference distributions](http://csvs.clinbioinfosspa.es/?tab=prs). The pipeline was designed to fix common VCF malformations, impute missing values and eventually generate a sample sheet to feed the [pgsc_calc](https://github.com/PGScatalog/pgsc_calc) tool.
 
 The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It uses Docker/Singularity containers making installation trivial and results highly reproducible. The Nextflow DSL2 implementation of this pipeline uses one container per process which makes it much easier to maintain and update software dependencies.
 
@@ -55,7 +55,7 @@ $ nextflow run babelomics/sprs --help
 Note that *-profile* and *-resume* are nextflow parameters and therefore are preceded by a single hyphens. To run the pipeline locally on a docker environment use `-profile docker`. Custom configuration files can be included with `-config nextflow.config` option. To see additional nextflow parameters use `nextflow run -help`.
 
 
-Once the sample sheet has been generated, you can calculate any polygenic risk score from [PDG catalog](https://www.pgscatalog.org) by running:
+Once the sample sheet has been generated, you can calculate any polygenic score from [PDG catalog](https://www.pgscatalog.org) by running:
 
 ```bash
 $ nextflow run pgscatalog/pgsc_calc \
