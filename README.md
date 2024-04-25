@@ -10,7 +10,7 @@
 -------------------------------------------------------------
 
 ## Summary
-*sprs* is a bioinformatics pipeline for calculating Polygenic Scores (PGS) from [PDG catalog](https://www.pgscatalog.org) on a set of samples so that they can be compared to the [Spanish PRS reference distributions](http://csvs.clinbioinfosspa.es/?tab=prs). The pipeline was designed to fix common VCF malformations, impute missing values and eventually generate a sample sheet to feed the [pgsc_calc](https://github.com/PGScatalog/pgsc_calc) tool.
+*spPGS* is a bioinformatics pipeline for calculating Polygenic Scores (PGS) from [PDG catalog](https://www.pgscatalog.org) on a set of samples so that they can be compared to the [Spanish PGS reference distributions](http://csvs.clinbioinfosspa.es/?tab=pgs). The pipeline was designed to fix common VCF malformations, impute missing values and eventually generate a sample sheet to feed the [pgsc_calc](https://github.com/PGScatalog/pgsc_calc) tool.
 
 The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It uses Docker/Singularity containers making installation trivial and results highly reproducible. The Nextflow DSL2 implementation of this pipeline uses one container per process which makes it much easier to maintain and update software dependencies.
 
@@ -36,7 +36,7 @@ The pipeline is built using Nextflow, a workflow tool to run tasks across multip
 Firstly, the sample-sheet and the imputed VCFs files have to be generated. You can do this for a set of genomes in a slurm environment by running the following command:
 
 ```bash
-$ nextflow run babelomics/sprs \
+$ nextflow run babelomics/spPGS \
   -profile slurm,singularity \
   -resume \
   --input_folder input_folder \
@@ -49,7 +49,7 @@ $ nextflow run babelomics/sprs \
 To see the full pipeline parameters list use:
 
 ```bash
-$ nextflow run babelomics/sprs --help 
+$ nextflow run babelomics/spPGS --help 
 ```
 
 Note that *-profile* and *-resume* are nextflow parameters and therefore are preceded by a single hyphens. To run the pipeline locally on a docker environment use `-profile docker`. Custom configuration files can be included with `-config nextflow.config` option. To see additional nextflow parameters use `nextflow run -help`.
@@ -66,7 +66,7 @@ $ nextflow run pgscatalog/pgsc_calc \
   --pgs_id PGS000021
 ```
 
-Your results, could then be compared with the [Spanish PRS reference distribution](http://csvs.clinbioinfosspa.es/?tab=prs).
+Your results, could then be compared with the [Spanish PGS reference distribution](http://csvs.clinbioinfosspa.es/?tab=pgs).
 
 
 ## Citation
