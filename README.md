@@ -70,7 +70,7 @@ Your results, could then be compared with the [Spanish PGS reference distributio
 
 
 ## Citation
-A manuscript describing the tool is in preparation. In the meantime if you use the tool we ask you to cite the repo and the paper describing the CSVS resource:  
-  * Peña-Chilet M et al. CSVS, a crowdsourcing database of the Spanish population genetic variability. Nucleic Acids Res. 2021 Jan 8;49(D1):D1130-D1137. doi: 10.1093/nar/gkaa794.
+If you use the tool we ask you to cite the repo and the paper describing the spPGS resource:  
+  * Carmona, R., et al. The Spanish Polygenic Score reference distribution: a resource for personalized medicine. Eur J Hum Genet (2025). https://doi.org/10.1038/s41431-025-01850-9
 
 
